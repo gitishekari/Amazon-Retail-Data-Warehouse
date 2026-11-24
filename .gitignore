@@ -1,0 +1,21 @@
+# Visual Studio & SSIS build/user artifacts
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.dtproj.user
+*.ispac
+BuildLog.xml
+
+# SQL Server & Power BI temporary/backup files
+*.bak
+*.ldf
+*.mdf
+*.pbix.tmp
+
+# OS & Office temp files
+.DS_Store
+Thumbs.db
+~$*.docx
+~$*.xlsx
