@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.AMAZON_DWH"
+  DTS:DTSID="{2BB826AC-E157-48B3-8758-263713279635}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=AMAZON_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Amazon_Datawarehouse_Project-{2BB826AC-E157-48B3-8758-263713279635}localhost.AMAZON_DWH;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
