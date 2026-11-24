@@ -1,0 +1,111 @@
+USE Amazon_ODS
+
+CREATE TABLE [ODS_EmployeeTerritories] (
+    [employeeID] varchar(10),
+    [territoryDescription] varchar(50),
+    [regionDescription] varchar(50)
+);
+
+
+
+CREATE TABLE [ODS_Employees] (
+    [employeeID] varchar(10),
+    [lastName] varchar(50),
+    [firstName] varchar(50),
+    [title] varchar(50),
+    [titleOfCourtesy] varchar(10),
+    [birthDate] datetime,
+    [hireDate] datetime,
+    [address] varchar(110),
+    [city] varchar(50),
+    [region] varchar(50),
+    [postalCode] varchar(20),
+    [country] varchar(50),
+    [emailAddress] nvarchar(110),
+    [homePhone] varchar(20),
+    [extension] varchar(10),
+    [reportsTo] varchar(10),
+    [territoryList] nvarchar(255),
+    [regionDescription] varchar(50)
+);
+
+
+
+CREATE TABLE [ODS_Products] (
+    [productID] varchar(10),
+    [productName] varchar(50),
+    [quantityPerUnit] varchar(50),
+    [unitPrice] numeric(18,2),
+    [unitsInStock] numeric(18,0),
+    [unitsOnOrder] numeric(18,0),
+    [reorderLevel] numeric(18,0),
+    [discontinued] numeric(18,0)
+);
+
+
+
+
+CREATE TABLE [ODS_Orders] (
+    [orderID] varchar(10),
+    [orderDate] datetime,
+    [requiredDate] datetime,
+    [shippedDate] datetime,
+    [freight] numeric(18,2),
+
+    [shipSenderName] nvarchar(50),
+    [shipSenderAddress] nvarchar(110),
+    [shipSenderCity] nvarchar(50),
+    [shipSenderRegion] nvarchar(50),
+    [shipSenderPostalCode] varchar(20),
+    [shipSenderCountry] varchar(50),
+
+    [shipTransferName] varchar(50),
+    [shipTransferPhone] varchar(20)
+);
+
+
+
+
+CREATE TABLE [ODS_OrderDetails] (
+    [orderID] varchar(10),
+    [productID] varchar(10),
+    [supplierID] varchar(10),
+    [customerID] varchar(10),
+    [employeeID] varchar(10),
+    [orderUnitPrice] numeric(18,2),
+    [quantity] numeric(18,0),
+    [discount] numeric(18,2),
+    [revenue] numeric(18,2)
+);
+
+
+
+
+CREATE TABLE [ODS_Customers] (
+    [customerID] varchar(10),
+    [companyName] nvarchar(50),
+    [contactName] nvarchar(50),
+    [contactTitle] varchar(50),
+    [address] nvarchar(110),
+    [city] nvarchar(50),
+    [region] nvarchar(50),
+    [postalCode] varchar(20),
+    [country] varchar(50),
+    [phone] varchar(20),
+    [fax] varchar(20)
+);
+
+
+CREATE TABLE [ODS_Suppliers] (
+    [supplierID] varchar(10),
+    [companyName] varchar(50),
+    [contactName] varchar(50),
+    [contactTitle] varchar(50),
+    [address] varchar(110),
+    [city] varchar(50),
+    [region] varchar(50),
+    [postalCode] varchar(20),
+    [country] varchar(50),
+    [phone] varchar(20),
+    [fax] varchar(20)
+);

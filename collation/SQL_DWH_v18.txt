@@ -1,0 +1,116 @@
+USE AMAZON_DWH
+
+
+
+CREATE TABLE [dbo].[DimEmployees](
+	[employeeKEY] INT PRIMARY KEY IDENTITY(1,1),
+	[employeeID] [nvarchar](10) NULL,    
+	[lastName] [nvarchar](50) NULL,
+	[firstName] [nvarchar](50) NULL,
+	[title] [nvarchar](50) NULL,
+	[titleOfCourtesy] [nvarchar](10) NULL,
+	[birthDate] [datetime] NULL,
+	[hireDate] [datetime] NULL,
+	[address] [nvarchar](110) NULL,
+	[city] [nvarchar](50) NULL,
+	[region] [nvarchar](50) NULL,
+	[postalCode] [nvarchar](20) NULL,
+	[country] [nvarchar](50) NULL,
+	[emailAddress] [nvarchar](110) NULL,
+	[homePhone] [nvarchar](20) NULL,
+	[extension] [nvarchar](10) NULL,
+	[reportsTo] [nvarchar](10) NULL,
+	[territoryList] [nvarchar](255) NULL,
+	[regionDescription] [nvarchar](50) NULL                        
+) ON [PRIMARY]
+
+
+
+
+CREATE TABLE [dbo].[DimCustomers](
+	[customerKEY] [int] IDENTITY(1,1) NOT NULL,
+	[customerID] [nvarchar](10) NULL,
+	[companyName] [nvarchar](50) NULL,
+	[contactName] [nvarchar](50) NULL,
+	[contactTitle] [nvarchar](50) NULL,
+	[address] [nvarchar](110) NULL,
+	[city] [nvarchar](50) NULL,
+	[region] [nvarchar](50) NULL,
+	[postalCode] [nvarchar](20) NULL,
+	[country] [nvarchar](50) NULL,
+	[phone] [nvarchar](20) NULL,
+	[fax] [nvarchar](20) NULL,
+	[StartDate] [datetime] DEFAULT GETDATE()-1,  
+        [EndDate] [datetime] NULL,  
+PRIMARY KEY CLUSTERED 
+(
+	[customerKEY] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+ 
+CREATE TABLE [dbo].[DimOrders](
+	[orderKEY] INT PRIMARY KEY IDENTITY(1,1),
+	[orderID] [nvarchar](10) NULL, 
+	[orderDateKEY] INT NULL,           
+	[requiredDateKEY] INT NULL,         
+	[shippedDateKEY] INT NULL,           
+	[freight] [numeric](18, 2) NULL,
+	[shipTransferName] [nvarchar](50) NULL,
+	[shipTransferPhone] [nvarchar](20) NULL
+) ON [PRIMARY]
+
+
+
+
+
+CREATE TABLE [dbo].[FACT_OrderDetails](
+	[orderDetailsKEY] INT PRIMARY KEY IDENTITY(1,1),
+	[orderKEY] INT NULL,
+	[productKEY] INT NULL,
+	[supplierKEY] INT NULL,
+	[customerKEY] INT NULL,
+	[employeeKEY] INT NULL,
+	[orderUnitPrice] [numeric](18, 2) NULL,
+	[quantity] [numeric](18, 0) NULL,
+	[discount] [numeric](18, 2) NULL,
+	[revenue] [numeric](18, 2) NULL
+) ON [PRIMARY]
+
+
+
+
+CREATE TABLE [dbo].[DimProducts](
+	[productKEY] INT PRIMARY KEY IDENTITY(1,1),
+	[productID] [nvarchar](10) NULL,
+	[productName] [nvarchar](50) NULL,
+	[quantityPerUnit] [nvarchar](50) NULL,
+	[unitPrice] [numeric](18, 2) NULL,
+	[unitsInStock] [numeric](18, 0) NULL,
+	[unitsOnOrder] [numeric](18, 0) NULL,
+	[reorderLevel] [numeric](18, 0) NULL,
+	[discontinued] [numeric](18, 0) NULL
+) ON [PRIMARY]
+
+
+
+
+
+CREATE TABLE [dbo].[DimSuppliers](
+	[supplierKEY] INT PRIMARY KEY IDENTITY(1,1),
+	[supplierID] [nvarchar](10) NULL,
+	[companyName] [nvarchar](50) NULL,
+	[contactName] [nvarchar](50) NULL,
+	[contactTitle] [nvarchar](50) NULL,
+	[address] [nvarchar](110) NULL,
+	[city] [nvarchar](50) NULL,
+	[region] [nvarchar](50) NULL,
+	[postalCode] [nvarchar](20) NULL,
+	[country] [nvarchar](50) NULL,
+	[phone] [nvarchar](20) NULL,
+	[fax] [nvarchar](20) NULL
+) ON [PRIMARY]
+
+
