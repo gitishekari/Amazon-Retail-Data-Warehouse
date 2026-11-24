@@ -1,0 +1,1135 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/19/2025 11:35:42 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DAMIEN"
+  DTS:CreatorName="DAMIEN\damie"
+  DTS:DTSID="{EA0CFD7A-3C66-4949-8E05-986DADDD4366}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="ODS_Suppliers"
+  DTS:PackageType="5"
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{E68704E9-7557-495A-A3A3-487A624A642A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - ODS Suppliers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{a4d04bdf-7cd7-483b-a65c-aaca6e17c77a}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - ODS Suppliers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - ODS Suppliers\DNCV - Resizing"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DNCV - Resizing"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[supplierID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="supplierID"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[supplierID]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[companyName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="companyName"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[companyName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[contactName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="contactName"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactName]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[contactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="contactTitle"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactTitle]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="address"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[address]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="city"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="region"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[region]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="postalCode"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[postalCode]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="country"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[country]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[phone]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="phone"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[phone]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données].Columns[fax]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="fax"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[supplierID_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[supplierID_R]"
+                      name="supplierID_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[supplierID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[companyName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[companyName_R]"
+                      name="companyName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[companyName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactName_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactName_R]"
+                      name="contactName_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactTitle_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactTitle_R]"
+                      name="contactTitle_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactTitle]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[address_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="110"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[address_R]"
+                      name="address_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[address]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[city_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[city_R]"
+                      name="city_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[city]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[region_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[region_R]"
+                      name="region_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[postalCode_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[postalCode_R]"
+                      name="postalCode_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[postalCode]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[country_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[country_R]"
+                      name="country_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[phone_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[phone_R]"
+                      name="phone_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[phone]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[fax_R]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[fax_R]"
+                      name="fax_R"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[fax]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST- ODS Suppliers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[ODS_Suppliers]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Connections[OleDbConnection]"
+                  connectionManagerID="{C765C87C-D990-4D89-A438-EAFD98AC9FAE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_ODS]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[supplierID_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="supplierID_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[supplierID]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[supplierID_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[companyName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="companyName_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[companyName]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[companyName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[contactName_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="contactName_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactName]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactName_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[contactTitle_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="contactTitle_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactTitle]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[contactTitle_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[address_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="110"
+                      cachedName="address_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[address]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[address_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[city_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[city]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[city_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[region_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="region_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[region]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[region_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[postalCode_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="postalCode_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[postalCode]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[postalCode_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[country_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[country]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[country_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[phone_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="phone_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[phone]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[phone_R]" />
+                    <inputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].Columns[fax_R]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="fax_R"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[fax]"
+                      lineageId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données].Columns[fax_R]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[supplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="supplierID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[companyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactTitle]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="110"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[postalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[phone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB].ExternalColumns[fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="fax" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC-STA Suppliers"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[STA_Suppliers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Connections[OleDbConnection]"
+                  connectionManagerID="{19ACC6D5-4482-410A-99A0-E90C287CC2BE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_STA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[supplierID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[supplierID]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[supplierID]"
+                      name="supplierID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[companyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[companyName]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[companyName]"
+                      name="companyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[contactName]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactName]"
+                      name="contactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[contactTitle]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[contactTitle]"
+                      name="contactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[address]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[region]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      name="postalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[phone]"
+                      name="phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[fax]"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].Columns[fax]"
+                      name="fax"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[supplierID]"
+                      dataType="wstr"
+                      length="255"
+                      name="supplierID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[companyName]"
+                      dataType="wstr"
+                      length="255"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[contactName]"
+                      dataType="wstr"
+                      length="255"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[contactTitle]"
+                      dataType="wstr"
+                      length="255"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="255"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="255"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output].ExternalColumns[fax]"
+                      dataType="wstr"
+                      length="255"
+                      name="fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[supplierID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[supplierID]"
+                      name="supplierID" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[companyName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[companyName]"
+                      name="companyName" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[contactName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[contactName]"
+                      name="contactName" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[contactTitle]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[contactTitle]"
+                      name="contactTitle" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[address]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[city]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[region]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[region]"
+                      name="region" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      name="postalCode" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[country]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      name="phone" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[fax]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[fax]"
+                      name="fax" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - ODS Suppliers.Paths[OLE DB Source Output]"
+              endId="Package\DFT - ODS Suppliers\DNCV - Resizing.Inputs[Entrée de conversion de données]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT - ODS Suppliers.Paths[Sortie de conversion de données]"
+              endId="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de conversion de données"
+              startId="Package\DFT - ODS Suppliers\DNCV - Resizing.Outputs[Sortie de conversion de données]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - TRUNCATE ODS Suppliers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{eaee43d3-ffdc-4cfd-8c6d-032eb8384a2f}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - TRUNCATE ODS Suppliers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C765C87C-D990-4D89-A438-EAFD98AC9FAE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE ODS_Suppliers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{253E25D5-B647-4C03-8B35-B5E3B609E1EA}"
+      DTS:From="Package\SQL - TRUNCATE ODS Suppliers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\DFT - ODS Suppliers" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\DFT - ODS Suppliers"
+          TopLeft="87.6666676683557,191.141666447876" />
+        <NodeLayout
+          Size="238.4,41.6"
+          Id="Package\SQL - TRUNCATE ODS Suppliers"
+          TopLeft="60,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="177.833333834178,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.541666447876"
+              Start="0,0"
+              End="0,82.041666447876">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,82.041666447876" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - ODS Suppliers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\DFT - ODS Suppliers\OLE_DST- ODS Suppliers"
+          TopLeft="194,324.940474949008" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\DFT - ODS Suppliers\DNCV - Resizing"
+          TopLeft="215.285714285714,228.291665905259" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers"
+          TopLeft="200,150.877531230672" />
+        <EdgeLayout
+          Id="Package\DFT - ODS Suppliers.Paths[OLE DB Source Output]"
+          TopLeft="296.767857142857,192.877531230672">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.4141346745866"
+              Start="0,0"
+              End="0,27.9141346745866">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.9141346745866" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - ODS Suppliers.Paths[Sortie de conversion de données]"
+          TopLeft="294.767857142857,270.291665905259">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.6488090437495"
+              Start="0,0"
+              End="0,47.1488090437495">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.1488090437495" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - ODS Suppliers\OLE_SRC-STA Suppliers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

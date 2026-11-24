@@ -1,0 +1,1670 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/10/2025 7:34:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-I2D8HOF"
+  DTS:CreatorName="DESKTOP-I2D8HOF\longn"
+  DTS:DTSID="{00355A80-5788-4FA0-87C9-C4FDC755B724}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="STA_Orders"
+  DTS:PackageType="5"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{CDF5AAC0-D858-4B16-A1C0-0AFE19E9A6F9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2B5BE2B3-27DE-4C4B-8166-023263D49BE0}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\longn\OneDrive\Bureau\CoursDsti\DataWarhousing\Project\Amazon\orders1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderID"
+              DTS:DTSID="{D1279066-464F-478D-B2E3-E9859ED92CEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{04B5C6B6-A646-4372-A04D-705CE05D264E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employeeID"
+              DTS:DTSID="{E66D668A-2E46-4E1A-B537-AAA66A8BF4CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderDate"
+              DTS:DTSID="{1C757E99-F5B5-41D4-B806-EB50C096DCA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="requiredDate"
+              DTS:DTSID="{B11D43AF-78B1-446A-89C6-BBA572ECEC91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shippedDate"
+              DTS:DTSID="{B6B7ED59-12DA-40C1-8422-16901D04DBD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipVia"
+              DTS:DTSID="{4279B64C-A0F7-4672-9CC2-C14D8108E38C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="freight"
+              DTS:DTSID="{AF993541-5DC9-458B-9F5F-B08CD5A4D2A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipName"
+              DTS:DTSID="{51410901-F475-42A9-83ED-C413B30DF06F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipAddress"
+              DTS:DTSID="{0561685B-E536-42E6-A0BC-7EBCCD12D429}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCity"
+              DTS:DTSID="{02687738-FF6E-4CD0-B382-CE4AA20E919D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipRegion"
+              DTS:DTSID="{6D0F29DE-853B-40B4-9DD5-3011064DD2DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipPostalCode"
+              DTS:DTSID="{D40042EE-FF96-4123-B664-4A6FC6144737}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCountry"
+              DTS:DTSID="{76A5DB87-F79D-47A7-8E40-5639A88B4A01}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{15B162BB-2E7F-4587-B3B1-E852EBA3EFAB}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\antho\OneDrive - Data ScienceTech Institute\100_COURSES\106_DataWarehouse\101_PROJECT\101_datasets\amazon\orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderID"
+              DTS:DTSID="{202929AC-3068-47B7-A32A-8101935AD36C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{61228111-A0E9-4B6D-BC4C-BDD448D0BEFD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employeeID"
+              DTS:DTSID="{0598CF6F-A59A-4C4F-A0A5-A499EF5A4BFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderDate"
+              DTS:DTSID="{31093BE5-55D2-4422-9627-B25441CF438A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="requiredDate"
+              DTS:DTSID="{F2C28E50-3673-4DEE-B90B-327864121C06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shippedDate"
+              DTS:DTSID="{E9F5726D-015A-4027-8C72-C9519B8AE04B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipVia"
+              DTS:DTSID="{AA779286-D3DA-41D4-8477-BE0507B86A8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="freight"
+              DTS:DTSID="{AC803C29-33EF-4E86-8BA1-0CFE621547CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipName"
+              DTS:DTSID="{5136A105-6FD3-4E90-B7E5-28E6D3B3C385}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipAddress"
+              DTS:DTSID="{A98DA46B-F84B-4AF8-8E36-9ADE0C769E21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCity"
+              DTS:DTSID="{7A9D9D5E-D71D-4B5C-A22D-792F8CF30D24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipRegion"
+              DTS:DTSID="{B61A0F88-FEAB-4513-8A42-5006BF1D1E9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipPostalCode"
+              DTS:DTSID="{A044B526-4CA9-4A74-BD63-94323ACDFADB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCountry"
+              DTS:DTSID="{A49AA739-D901-4940-9161-8C0B90674D50}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F118CE5B-0FB7-4032-A9B3-15D65B74BC76}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ariel\OneDrive\Bureau\dwh\orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderID"
+              DTS:DTSID="{D506A190-4C83-4785-8E80-77720E053C6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{EF3ADEBA-9DEF-4798-9EC7-ABC21DB903EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employeeID"
+              DTS:DTSID="{3CCB5C77-69FD-40F0-8D0D-09B0A7BC7F16}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderDate"
+              DTS:DTSID="{26594622-50C7-4379-B022-974B9FD15AFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="requiredDate"
+              DTS:DTSID="{6E5E68B5-7CCC-4AE8-9432-CBDDAB93659D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shippedDate"
+              DTS:DTSID="{DDD93ADF-6D00-488E-9E14-D231135C5EA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipVia"
+              DTS:DTSID="{496DFC44-7617-470A-9616-AD02896A4776}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="freight"
+              DTS:DTSID="{F5E92DE5-B2F1-415E-8761-B8CB0C85460B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipName"
+              DTS:DTSID="{1FCA3F62-6AD6-417A-8FAC-DB758F3E60AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipAddress"
+              DTS:DTSID="{C53EB663-3F8F-4C07-8599-A9C6EAA07258}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCity"
+              DTS:DTSID="{DA452AE6-0768-4846-BFB3-041118EEE9B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipRegion"
+              DTS:DTSID="{667C7677-5EBB-4191-9A81-8BAFFAC9FE98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipPostalCode"
+              DTS:DTSID="{909C9090-852F-49C3-ABE5-30479E8E6035}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCountry"
+              DTS:DTSID="{497265B4-A77B-4F2C-952B-9B5BF244086D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{17E874A8-7A90-446F-A298-1E6615AF29C9}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damie\Documents\Cours\DataWhareHouse ETL\AMAZON\orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderID"
+              DTS:DTSID="{9D79AA87-EF88-4730-8DB3-F14A5614A9A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{AA3A50FB-92C7-491F-8D07-5C9BF94F7032}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employeeID"
+              DTS:DTSID="{8AEBAE3C-7136-4BB4-AEA7-CCB63A824D7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderDate"
+              DTS:DTSID="{C456F027-DC67-4F4B-9F0B-F887882D58A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="requiredDate"
+              DTS:DTSID="{541BBC27-BD0C-4AC8-B103-99592B22299F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shippedDate"
+              DTS:DTSID="{38FA9599-10D0-4F44-8EAC-6C946CDF6C00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipVia"
+              DTS:DTSID="{DE16DF48-4869-4B51-904C-1381B1F31501}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="freight"
+              DTS:DTSID="{EB21EB45-4E72-48BE-92B3-B37B91099D1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipName"
+              DTS:DTSID="{3C4BCD13-859F-42A0-92A6-D7F52A2CC646}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipAddress"
+              DTS:DTSID="{895C4BD5-801A-4B61-A61C-C847FFAC35E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCity"
+              DTS:DTSID="{A9EB8045-9326-489F-ABB6-91D438106281}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipRegion"
+              DTS:DTSID="{3CE68B4E-3CE1-4C94-B8DE-65799E3F1483}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipPostalCode"
+              DTS:DTSID="{F82D12AB-BB27-4AE4-9BD5-6CB7FFAD1B1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCountry"
+              DTS:DTSID="{287E9DEC-8E91-42C8-9328-36469C209BF1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B3E99768-AB96-425D-844E-5728D2D5987F}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{B3E99768-AB96-425D-844E-5728D2D5987F}localhost.Project_STA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[orders csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5217C022-16AC-4DAA-BF40-15A09CFAF47D}"
+      DTS:ObjectName="orders csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\antho\OneDrive - Data ScienceTech Institute\100_COURSES\106_DataWarehouse\101_PROJECT\101_datasets\amazon\orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderID"
+              DTS:DTSID="{7A2A0A3F-3E40-43D7-9C32-D14C0B7E9E9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{69988E83-F34D-447A-B6A5-C579EE2F6F15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employeeID"
+              DTS:DTSID="{1112AB7F-1AE4-4639-A68F-F06E7455EE34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="orderDate"
+              DTS:DTSID="{72E74341-9B35-444B-99BB-6AFD69957F76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="requiredDate"
+              DTS:DTSID="{216F0309-8CEB-4F5E-B99E-9914BD9676D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shippedDate"
+              DTS:DTSID="{F68B07D4-84AF-462E-94C8-A720350C8CB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipVia"
+              DTS:DTSID="{8038B7C8-BC46-4907-A146-BDB58E2459FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="freight"
+              DTS:DTSID="{AD018C75-85AD-4D0D-8180-B15E91586505}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipName"
+              DTS:DTSID="{D31000B3-9E46-485C-B203-2735AC5FB345}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipAddress"
+              DTS:DTSID="{5F8838F5-0F0A-443B-9AB2-E4BCB00F25ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCity"
+              DTS:DTSID="{920033CA-6312-4AFF-8BF8-D9377284BF02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipRegion"
+              DTS:DTSID="{201A19D7-F878-43E4-98E5-DF44ECEFFB78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipPostalCode"
+              DTS:DTSID="{C3209DD8-7F21-4EB5-8033-F2D236726F8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="shipCountry"
+              DTS:DTSID="{685C834E-3A2D-4AB1-BB0E-4D7A9B502A94}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - STA Orders"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{D3FD3EA3-946A-48B1-9212-D2DD7CFD77E5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - STA Orders"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - STA Orders\FF_SRC - Orders"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1033"
+              name="FF_SRC - Orders"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - STA Orders\FF_SRC - Orders.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[orders csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[orders csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[orderID]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderID]"
+                      name="orderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[customerID]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[customerID]"
+                      name="customerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[employeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[employeeID]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[employeeID]"
+                      name="employeeID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[orderDate]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderDate]"
+                      name="orderDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[requiredDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[requiredDate]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[requiredDate]"
+                      name="requiredDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shippedDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shippedDate]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shippedDate]"
+                      name="shippedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipVia]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipVia]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipVia]"
+                      name="shipVia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[freight]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[freight]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[freight]"
+                      name="freight"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipName]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipName]"
+                      name="shipName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipAddress]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipAddress]"
+                      name="shipAddress"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipCity]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCity]"
+                      name="shipCity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipRegion]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipRegion]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipRegion]"
+                      name="shipRegion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipPostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipPostalCode]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipPostalCode]"
+                      name="shipPostalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipCountry]"
+                      length="50"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCountry]"
+                      name="shipCountry"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[orderID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="orderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[employeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="employeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[orderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="orderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[requiredDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="requiredDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shippedDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shippedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipVia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipVia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[freight]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="freight" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipRegion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipRegion" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipPostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipPostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].ExternalColumns[shipCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="shipCountry" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - STA Orders\OLE_DST - STA Orders"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST - STA Orders"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[STA_Orders]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Connections[OleDbConnection]"
+                  connectionManagerID="{19ACC6D5-4482-410A-99A0-E90C287CC2BE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_STA]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[orderID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="orderID"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[orderID]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderID]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[customerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[customerID]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[customerID]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[employeeID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="employeeID"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[employeeID]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[employeeID]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[orderDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="orderDate"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[orderDate]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[orderDate]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[requiredDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="requiredDate"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[requiredDate]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[requiredDate]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shippedDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shippedDate"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shippedDate]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shippedDate]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipVia]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipVia"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipVia]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipVia]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[freight]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="freight"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[freight]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[freight]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipName"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipName]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipName]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipAddress"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipAddress]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipAddress]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipCity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipCity"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipCity]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCity]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipRegion]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipRegion"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipRegion]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipRegion]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipPostalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipPostalCode"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipPostalCode]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipPostalCode]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].Columns[shipCountry]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="shipCountry"
+                      externalMetadataColumnId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipCountry]"
+                      lineageId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat].Columns[shipCountry]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[orderID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="orderID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[employeeID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="employeeID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[orderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="orderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[requiredDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="requiredDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shippedDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shippedDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipVia]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipVia" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[freight]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="freight" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipCity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipRegion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipRegion" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipPostalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipPostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB].ExternalColumns[shipCountry]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="shipCountry" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Orders\OLE_DST - STA Orders.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - STA Orders\OLE_DST - STA Orders.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Orders\OLE_DST - STA Orders.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - STA Orders.Paths[Sortie de source de fichier plat]"
+              endId="Package\DFT - STA Orders\OLE_DST - STA Orders.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source de fichier plat"
+              startId="Package\DFT - STA Orders\FF_SRC - Orders.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - TRUNCATE Amazon STA_Orders"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BDCD9875-E3C3-4640-8E6C-DE5A427FE103}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - TRUNCATE Amazon STA_Orders"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{19ACC6D5-4482-410A-99A0-E90C287CC2BE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE STA_Orders" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{92D50342-B936-4588-9496-0BD7022C212E}"
+      DTS:From="Package\SQL - TRUNCATE Amazon STA_Orders"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - STA Orders" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\DFT - STA Orders"
+          TopLeft="295.624987790361,233.144734458096" />
+        <NodeLayout
+          Size="266.4,41.6"
+          Id="Package\SQL - TRUNCATE Amazon STA_Orders"
+          TopLeft="239.999989271165,106.736840933313" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="375.012488530763,148.336840933313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.807893524783"
+              Start="0,0"
+              End="0,77.307893524783">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.307893524783" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - STA Orders">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\DFT - STA Orders\OLE_DST - STA Orders"
+          TopLeft="321.374984940515,239.160085116166" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\DFT - STA Orders\FF_SRC - Orders"
+          TopLeft="337.499984912575,127.947367016215" />
+        <EdgeLayout
+          Id="Package\DFT - STA Orders.Paths[Sortie de source de fichier plat]"
+          TopLeft="417.437484926545,169.947367016215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.2127180999512"
+              Start="0,0"
+              End="0,61.7127180999512">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.7127180999512" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - STA Orders\OLE_DST - STA Orders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

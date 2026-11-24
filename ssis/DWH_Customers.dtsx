@@ -1,0 +1,1801 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/4/2025 12:01:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ARIEL"
+  DTS:CreatorName="ARIEL\Ariel"
+  DTS:DTSID="{D392606B-EB47-4AE0-AECB-8644F0301DF8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{BEE8F086-0670-4284-9A5F-1A5F57FEAF99}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - DWH Customers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{09C9FE8D-89D0-4975-B876-5C8B32BAF6F6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - DWH Customers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - DWH Customers\ALL - Union updates"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="ALL - Union updates"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[customerID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="customerID"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[customerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[companyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="companyName"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[companyName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[companyName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[contactName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactName"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[contactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactTitle"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactTitle]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactTitle]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="110"
+                      cachedName="address"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[address]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[city]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="region"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[region]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="postalCode"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[postalCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[country]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[phone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="phone"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[phone]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1].Columns[fax]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="fax"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[fax]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[fax]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[customerID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="customerID"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[customerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[companyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="companyName"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[companyName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[companyName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[contactName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactName"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[contactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactTitle"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactTitle]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactTitle]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="110"
+                      cachedName="address"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[address]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[city]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="region"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[region]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="postalCode"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[postalCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[country]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[phone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="phone"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[phone]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2].Columns[fax]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="fax"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[fax]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[fax]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[customerID]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[customerID]"
+                      name="customerID" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[companyName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[companyName]"
+                      name="companyName" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactName]"
+                      name="contactName" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactTitle]"
+                      name="contactTitle" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[address]"
+                      dataType="wstr"
+                      length="110"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[city]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[region]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[region]"
+                      name="region" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[postalCode]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[postalCode]"
+                      name="postalCode" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[phone]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[phone]"
+                      name="phone" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[fax]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[fax]"
+                      name="fax" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH Customers\CMD - Update DimCustomers"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="CMD - Update DimCustomers"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimCustomers]
+
+SET [EndDate] = GETDATE()
+
+WHERE [customerID] = ? AND [EndDate] IS NULL</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Connections[OleDbConnection]"
+                  connectionManagerID="{2BB826AC-E157-48B3-8758-263713279635}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input].Columns[customerID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH Customers\LKP - Check if there is any changes"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - Check if there is any changes"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCustomers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCustomers]) [refTable]
+where [refTable].[contactName] = ? and [refTable].[address] = ? and [refTable].[city] = ? and [refTable].[region] = ? and [refTable].[postalCode] = ? and [refTable].[country] = ? and [refTable].[phone] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="customerKEY" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="customerID" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="companyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="contactName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="contactTitle" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="address" dataType="DT_WSTR" length="110" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="city" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="region" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="postalCode" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="phone" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="fax" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StartDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]};#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Connections[OleDbConnection]"
+                  connectionManagerID="{2BB826AC-E157-48B3-8758-263713279635}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[contactName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactName"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">contactName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="110"
+                      cachedName="address"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">address</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">city</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="region"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">region</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="postalCode"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">postalCode</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">country</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input].Columns[phone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="phone"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">phone</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH Customers\LKP - customerID"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="LKP - customerID"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCustomers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCustomers]) [refTable]
+where [refTable].[customerID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="customerKEY" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="customerID" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="companyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="contactName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="contactTitle" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="address" dataType="DT_WSTR" length="110" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="city" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="region" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="postalCode" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="country" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="phone" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="fax" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH Customers\LKP - customerID.Connections[OleDbConnection]"
+                  connectionManagerID="{2BB826AC-E157-48B3-8758-263713279635}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_DWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input].Columns[customerID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="customerID"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">customerID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE_DST - DWH Customers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCustomers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Connections[OleDbConnection]"
+                  connectionManagerID="{2BB826AC-E157-48B3-8758-263713279635}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[customerID]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[customerID]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[companyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="companyName"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[companyName]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[companyName]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[contactName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactName"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[contactName]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactName]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[contactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="contactTitle"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[contactTitle]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[contactTitle]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[address]"
+                      cachedDataType="wstr"
+                      cachedLength="110"
+                      cachedName="address"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[address]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[address]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[city]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[region]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[region]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[postalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="postalCode"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[postalCode]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[postalCode]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[country]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[phone]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="phone"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[phone]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[phone]" />
+                    <inputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].Columns[fax]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="fax"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[fax]"
+                      lineageId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1].Columns[fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[customerKEY]"
+                      dataType="i4"
+                      name="customerKEY" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[customerID]"
+                      dataType="wstr"
+                      length="10"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[companyName]"
+                      dataType="wstr"
+                      length="50"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[contactName]"
+                      dataType="wstr"
+                      length="50"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[contactTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="110"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="50"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[postalCode]"
+                      dataType="wstr"
+                      length="20"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[phone]"
+                      dataType="wstr"
+                      length="20"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[fax]"
+                      dataType="wstr"
+                      length="20"
+                      name="fax" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE_SRC - ODS Customers"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ODS_Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Connections[OleDbConnection]"
+                  connectionManagerID="{C765C87C-D990-4D89-A438-EAFD98AC9FAE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_ODS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[customerID]"
+                      length="10"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[customerID]"
+                      name="customerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[companyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[companyName]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[companyName]"
+                      name="companyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[contactName]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactName]"
+                      name="contactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[contactTitle]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[contactTitle]"
+                      name="contactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[address]"
+                      length="110"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[region]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[postalCode]"
+                      name="postalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[phone]"
+                      name="phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[fax]"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].Columns[fax]"
+                      name="fax"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[customerID]"
+                      dataType="wstr"
+                      length="10"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[companyName]"
+                      dataType="wstr"
+                      length="50"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[contactName]"
+                      dataType="wstr"
+                      length="50"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[contactTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[address]"
+                      dataType="wstr"
+                      length="110"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="50"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[postalCode]"
+                      dataType="wstr"
+                      length="20"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[phone]"
+                      dataType="wstr"
+                      length="20"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output].ExternalColumns[fax]"
+                      dataType="wstr"
+                      length="20"
+                      name="fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[customerID]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[customerID]"
+                      name="customerID" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[companyName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[companyName]"
+                      name="companyName" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[contactName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[contactName]"
+                      name="contactName" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[contactTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[contactTitle]"
+                      name="contactTitle" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[address]"
+                      dataType="wstr"
+                      length="110"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[address]"
+                      name="address" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[city]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[region]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[region]"
+                      name="region" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[postalCode]"
+                      name="postalCode" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[country]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[phone]"
+                      name="phone" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[fax]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[fax]"
+                      name="fax" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - DWH Customers.Paths[Lookup Match Output]"
+              endId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT - DWH Customers.Paths[Lookup No Match Output]"
+              endId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\DFT - DWH Customers\LKP - Check if there is any changes.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT - DWH Customers.Paths[Lookup No Match Output1]"
+              endId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\DFT - DWH Customers\LKP - customerID.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT - DWH Customers.Paths[OLE DB Command Output]"
+              endId="Package\DFT - DWH Customers\ALL - Union updates.Inputs[Union All Input 2]"
+              name="OLE DB Command Output"
+              startId="Package\DFT - DWH Customers\CMD - Update DimCustomers.Outputs[OLE DB Command Output]" />
+            <path
+              refId="Package\DFT - DWH Customers.Paths[OLE DB Source Output]"
+              endId="Package\DFT - DWH Customers\LKP - customerID.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - DWH Customers\OLE_SRC - ODS Customers.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT - DWH Customers.Paths[Union All Output 1]"
+              endId="Package\DFT - DWH Customers\OLE_DST - DWH Customers.Inputs[OLE DB Destination Input]"
+              name="Union All Output 1"
+              startId="Package\DFT - DWH Customers\ALL - Union updates.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\DFT - DWH Customers"
+          TopLeft="282.166666712198,89.4583329163078" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - DWH Customers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="213.6,41.6"
+          Id="Package\DFT - DWH Customers\OLE_SRC - ODS Customers"
+          TopLeft="131.166667668356,34.5333331615726" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\DFT - DWH Customers\ALL - Union updates"
+          TopLeft="155.833324818976,232.266665051513" />
+        <NodeLayout
+          Size="217.6,41.6"
+          Id="Package\DFT - DWH Customers\CMD - Update DimCustomers"
+          TopLeft="445.333347356981,230.399998578132" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\DFT - DWH Customers\OLE_DST - DWH Customers"
+          TopLeft="132.33333424396,321.283331681804" />
+        <NodeLayout
+          Size="243.2,41.6"
+          Id="Package\DFT - DWH Customers\LKP - Check if there is any changes"
+          TopLeft="438.000000546376,118.924999449096" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\DFT - DWH Customers\LKP - customerID"
+          TopLeft="154.999999863406,112.091666236296" />
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[Union All Output 1]"
+          TopLeft="240.883329531468,273.866665051513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.4166666302906"
+              Start="0,0"
+              End="0,39.9166666302906">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.9166666302906" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[OLE DB Source Output]"
+          TopLeft="236.883333765881,76.1333331615726">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.9583330747237"
+              Start="0,0"
+              End="0,28.4583330747237">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.4583330747237" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[OLE DB Command Output]"
+          TopLeft="445.333347356981,252.133331814823">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.700022538005,0"
+              Start="0,0"
+              End="-109.200022538005,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-109.200022538005,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[Lookup No Match Output1]"
+          TopLeft="239.016662341191,153.691666236296">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78.5749988152172"
+              Start="0,0"
+              End="0,71.0749988152172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.0749988152172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,29.7328119076086,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[Lookup No Match Output]"
+          TopLeft="556.866673951678,160.524999449096">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.874999129036"
+              Start="0,0"
+              End="0,62.374999129036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.374999129036" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,25.382812064518,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - DWH Customers.Paths[Lookup Match Output]"
+          TopLeft="316.599999863406,136.308332842696">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121.40000068297,0"
+              Start="0,0"
+              End="113.90000068297,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.90000068297,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="8.75861362273489,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH Customers\OLE_SRC - ODS Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH Customers\OLE_DST - DWH Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH Customers\LKP - Check if there is any changes">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomers]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - DWH Customers\LKP - customerID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomers]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

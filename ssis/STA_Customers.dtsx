@@ -1,0 +1,1290 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/10/2025 7:50:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-I2D8HOF"
+  DTS:CreatorName="DESKTOP-I2D8HOF\longn"
+  DTS:DTSID="{20A25D23-D739-4544-8A7A-2D7BB146698F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="STA_Customers"
+  DTS:PackageType="5"
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{37A50972-5A45-47C7-9F20-B0C1572946A6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F18A9E1A-35B3-4711-B713-AC46B51AEF13}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\longn\OneDrive\Bureau\CoursDsti\DataWarhousing\Project\Amazon\orders1.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{85E0CCD8-FC17-4480-AB2C-2DF6F55D80AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="companyName"
+              DTS:DTSID="{32784622-9631-410B-9B97-2F7C7DB53433}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactName"
+              DTS:DTSID="{A1F2C42E-EBEB-4412-AAF0-C5978C5B4360}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactTitle"
+              DTS:DTSID="{C468D638-9D52-4CC6-9CAE-580229466132}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{C9B8A4BD-6E66-4433-AE10-982D3A2D69FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{C891DFA2-0493-4811-A98C-E4477EF5AD7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{8F1E5C8C-79AF-4442-A786-F59338DEC68A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{868242B7-912E-4C19-A720-41F2053386E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{C1693A5B-DDB9-4D47-B9D8-2F8237880EC2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone"
+              DTS:DTSID="{970D7B73-9475-4F3E-8062-BA449571FD0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fax"
+              DTS:DTSID="{EA0E823A-6527-44DE-9AC9-4732189EC23E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3DBB6778-E585-4D47-A81F-6F2B5F14F712}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\antho\OneDrive - Data ScienceTech Institute\100_COURSES\106_DataWarehouse\101_PROJECT\101_datasets\amazon\customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{D4ADEA5D-EAE5-471D-BE39-EB0E9D03B4F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="companyName"
+              DTS:DTSID="{1B75AFA6-C55F-4AE0-8295-619A863A5771}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactName"
+              DTS:DTSID="{42F4E1CE-0031-47B5-B29D-71C69D7EED7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactTitle"
+              DTS:DTSID="{F6CC8B3E-D403-42A0-9491-F3714A0CB040}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{C2310D42-31B3-434E-BBE0-593E64F9068F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{C1558BA9-2A65-460F-AF34-4825F03EAC3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{535A1B1F-281A-4D37-AE5B-8F5C7C51153E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{C888CD93-1909-4F9D-A338-9F2564DF2EF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{1F74F8D4-2D8A-4065-89E0-E9544E767D7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone"
+              DTS:DTSID="{69CC06FE-EEC5-41C4-B5FE-91DC2BB06907}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fax"
+              DTS:DTSID="{9B5F5B05-52E8-42B3-9278-F127CECF6016}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1BBCA776-510D-4EB1-A78C-E103D081C33F}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ariel\OneDrive\Bureau\dwh\customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{4960B055-6B3F-499C-890D-DC4FF8ABD01B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="companyName"
+              DTS:DTSID="{11AB5641-135C-46D0-A103-3DED83D2EDD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactName"
+              DTS:DTSID="{9B4C5C49-09E6-4026-83A3-3C389E0381A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactTitle"
+              DTS:DTSID="{B2AF30A6-D75F-437C-984F-B27026C3A315}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{79802D4C-73AC-4E07-8A52-83719703DB5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{BE4D3DD9-6DFA-45C3-9B39-E0B58A34601B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{A45C6515-59F1-45F5-B41F-B11266E28F13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{EC02FA0B-1DF7-4BA3-8019-21A7D846E141}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{562CC04C-D119-4579-9884-04C814C3074F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone"
+              DTS:DTSID="{E5F80EA8-290C-4E54-9042-A23F8152B9FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fax"
+              DTS:DTSID="{EFD81D6C-0FC1-407E-A127-17713DDEAD3D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{957C97EB-798F-4811-88A5-A705380975C1}"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\damie\Documents\Cours\DataWhareHouse ETL\AMAZON\customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="customerID"
+              DTS:DTSID="{D00296DD-35F3-4C7F-893A-2D9AC9CF2D62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="companyName"
+              DTS:DTSID="{DA085302-2775-4E99-809E-5C185976148B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactName"
+              DTS:DTSID="{A6B12C62-2963-4331-A1AC-5AD6BC5D94BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactTitle"
+              DTS:DTSID="{904B70BA-DE05-4E74-A99C-4EF6540502AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{012E6AFA-D9A3-4F6B-81C6-CF3DE99537B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="city"
+              DTS:DTSID="{DD27536A-B75E-4CEA-AFF8-0749F33527D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{87F52F0D-C1D6-40E6-97E9-450440D6A6A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="postalCode"
+              DTS:DTSID="{693F128C-EAE1-4DEA-817F-BD1616D251FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="country"
+              DTS:DTSID="{FC1AB035-4AA8-4A63-BE82-5BE36F87648B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone"
+              DTS:DTSID="{B4B57DCD-81B6-4AB1-9CD6-51802CB0CF40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fax"
+              DTS:DTSID="{ED0C8ED1-5DA7-4F0C-A3E4-BD566BE25896}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Project_STA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E22B94C3-E8BA-4C5C-93BC-FB9D110AC62A}"
+      DTS:ObjectName="localhost.Project_STA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Project_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-STA_Customers-{E22B94C3-E8BA-4C5C-93BC-FB9D110AC62A}localhost.Project_STA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - STA Customers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{24C0AC82-0453-47AA-AA30-884F185F55B7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - STA Customers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - STA Customers\FF_SRC - Customers"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Source du fichier plat"
+              localeId="1033"
+              name="FF_SRC - Customers"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - STA Customers\FF_SRC - Customers.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[customerID]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[customerID]"
+                      name="customerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[companyName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[companyName]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[companyName]"
+                      name="companyName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[contactName]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactName]"
+                      name="contactName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactTitle]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[contactTitle]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactTitle]"
+                      name="contactTitle"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[address]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[address]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[address]"
+                      name="address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[region]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[postalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[postalCode]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[postalCode]"
+                      name="postalCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[country]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[phone]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[phone]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[phone]"
+                      name="phone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[fax]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[fax]"
+                      length="50"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[fax]"
+                      name="fax"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[companyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[contactName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[contactTitle]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[postalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[phone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].ExternalColumns[fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat" />
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - STA Customers\OLE_DST - STA Customers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST - STA Customers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[STA_Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Connections[OleDbConnection]"
+                  connectionManagerID="{19ACC6D5-4482-410A-99A0-E90C287CC2BE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost.AMAZON_STA]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[customerID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="customerID"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[customerID]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[customerID]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[companyName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="companyName"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[companyName]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[companyName]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[contactName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="contactName"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactName]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactName]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[contactTitle]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="contactTitle"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactTitle]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[contactTitle]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[address]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="address"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[address]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[address]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[city]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[city]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="region"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[region]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[region]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[postalCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="postalCode"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[postalCode]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[postalCode]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[country]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[country]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[phone]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[phone]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[phone]" />
+                    <inputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].Columns[fax]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fax"
+                      externalMetadataColumnId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[fax]"
+                      lineageId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat].Columns[fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[customerID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="customerID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[companyName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="companyName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="contactName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[contactTitle]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="contactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[address]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[postalCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="postalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[phone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB].ExternalColumns[fax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="fax" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Customers\OLE_DST - STA Customers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - STA Customers\OLE_DST - STA Customers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - STA Customers\OLE_DST - STA Customers.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - STA Customers.Paths[Sortie de source de fichier plat]"
+              endId="Package\DFT - STA Customers\OLE_DST - STA Customers.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source de fichier plat"
+              startId="Package\DFT - STA Customers\FF_SRC - Customers.Outputs[Sortie de source de fichier plat]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - TRUNCATE Amazon STA_Customers"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1af56c3b-575c-4d30-b3c5-09a989ab1086}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - TRUNCATE Amazon STA_Customers"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{19ACC6D5-4482-410A-99A0-E90C287CC2BE}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE STA_Customers" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5CA15EB0-5641-4F4D-ADB9-72B49196CE39}"
+      DTS:From="Package\SQL - TRUNCATE Amazon STA_Customers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - STA Customers" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\DFT - STA Customers"
+          TopLeft="258.833321900832,189.472805000606" />
+        <NodeLayout
+          Size="284.8,41.6"
+          Id="Package\SQL - TRUNCATE Amazon STA_Customers"
+          TopLeft="214.124990249053,41.4561408097655" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="353.279156074943,83.0561408097655">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,106.416664190841"
+              Start="0,0"
+              End="0,98.9166641908409">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.9166641908409" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - STA Customers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\DFT - STA Customers\OLE_DST - STA Customers"
+          TopLeft="334.999985024334,217.578944979447" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\DFT - STA Customers\FF_SRC - Customers"
+          TopLeft="332.499985136092,111.526314564937" />
+        <EdgeLayout
+          Id="Package\DFT - STA Customers.Paths[Sortie de source de fichier plat]"
+          TopLeft="425.249985080213,153.526314564937">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.05263041451"
+              Start="0,0"
+              End="0,56.55263041451">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.55263041451" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - STA Customers\OLE_DST - STA Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
